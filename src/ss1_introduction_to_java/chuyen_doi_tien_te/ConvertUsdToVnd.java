@@ -1,4 +1,4 @@
-package ss1_introduction_to_java.hien_thi_loi_chao;
+package ss1_introduction_to_java.chuyen_doi_tien_te;
 
 import java.util.Scanner;
 
