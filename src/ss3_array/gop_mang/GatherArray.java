@@ -23,7 +23,7 @@ public class GatherArray {
             System.out.println("Nhập phần tử thứ " + (i + 1) + ":");
             arrNumber2[i] = Integer.parseInt(scanner.nextLine());
         }
-        // Tạo và mảng 3
+        // Tạo và gộp mảng 1, 2 thành mảng mới
         int[]arrNumber3 = new int[M + N];
         for (int i = 0; i < arrNumber1.length; i++) {
             arrNumber3[i] = arrNumber1[i];
