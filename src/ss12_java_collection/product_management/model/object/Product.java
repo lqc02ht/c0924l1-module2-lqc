@@ -1,17 +1,18 @@
-package ss9_list.customer_management.model.object;
+package ss12_java_collection.product_management.model.object;
 
 public class Product {
     private int id;
     private String name;
-    private String birthDate;
+    private double price;
     private String address;
 
-    public Product() {}
+    public Product() {
+    }
 
-    public Product(int id, String name, String birthDate, String address) {
+    public Product(int id, String name, double price, String address) {
         this.id = id;
         this.name = name;
-        this.birthDate = birthDate;
+        this.price = price;
         this.address = address;
     }
 
@@ -31,12 +32,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public double getPrice() {
+        return price;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getAddress() {
@@ -49,10 +50,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
+                ", price='" + price + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }

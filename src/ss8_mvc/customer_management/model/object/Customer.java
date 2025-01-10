@@ -49,7 +49,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", birthDate='" + birthDate + '\'' +
