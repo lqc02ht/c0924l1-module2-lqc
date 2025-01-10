@@ -52,6 +52,7 @@ public class ProductService implements IProductService {
         return isDeleted;
     }
 
+    @Override
     public boolean updateProduct(int id, Product updatedProduct) {
         List<Product> productList = findAll();
         boolean isUpdated = false;
