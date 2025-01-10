@@ -1,17 +1,18 @@
-package ss8_mvc.customer_management.model.object;
+package ss16_io_text_file.product_management.model.object;
 
-public class Customer {
+public class Product {
     private int id;
     private String name;
-    private String birthDate;
+    private double price;
     private String address;
 
-    public Customer() {}
+    public Product() {
+    }
 
-    public Customer(int id, String name, String birthDate, String address) {
+    public Product(int id, String name, double price, String address) {
         this.id = id;
         this.name = name;
-        this.birthDate = birthDate;
+        this.price = price;
         this.address = address;
     }
 
@@ -31,12 +32,12 @@ public class Customer {
         this.name = name;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public double getPrice() {
+        return price;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getAddress() {
@@ -52,8 +53,12 @@ public class Customer {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
+                ", price='" + price + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    public String getInfoToFile() {
+        return this.id + "," + this.name + "," + this.price + "," + this.address;
     }
 }

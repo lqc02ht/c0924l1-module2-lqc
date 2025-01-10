@@ -1,13 +1,13 @@
 package ss9_list.customer_management.controller;
 
-import ss9_list.customer_management.model.object.Customer;
-import ss9_list.customer_management.model.service.CustomerService;
+import ss9_list.customer_management.model.object.Product;
+import ss9_list.customer_management.model.service.ProductService;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerController {
-    private CustomerService customerService = new CustomerService();
+public class ProductController {
+    private ProductService productService = new ProductService();
 
     public void displayCustomerMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -22,9 +22,9 @@ public class CustomerController {
             switch (choice) {
                 case 1:
                     System.out.println("---------- Xem danh sách ----------");
-                    List<Customer> customers = customerService.findAll();
-                    for (Customer customer : customers) {
-                        System.out.println(customer);
+                    List<Product> products = productService.findAll();
+                    for (Product product : products) {
+                        System.out.println(product);
                     }
                     break;
                 case 2:
@@ -37,14 +37,14 @@ public class CustomerController {
                     String birthDate = scanner.nextLine();
                     System.out.println("Nhập address:");
                     String address = scanner.nextLine();
-                    Customer customer = new Customer(id, name, birthDate, address);
-                    customerService.addCustomer(customer);
+                    Product product = new Product(id, name, birthDate, address);
+                    productService.addCustomer(product);
                     break;
                 case 3:
                     System.out.println("---------- Xoá ----------");
                     System.out.println("Nhập id khách hàng cần xoá: ");
                     int deleteId = Integer.parseInt(scanner.nextLine());
-                    boolean isDeleted = customerService.deleteCustomerById(deleteId);
+                    boolean isDeleted = productService.deleteProductById(deleteId);
                     if (isDeleted) {
                         System.out.println("Xoá khách hàng thành công!");
                     } else {
@@ -61,8 +61,8 @@ public class CustomerController {
                     String newBirthDate = scanner.nextLine();
                     System.out.println("Nhập address mới:");
                     String newAddress = scanner.nextLine();
-                    Customer updatedCustomer = new Customer(updateId, newName, newBirthDate, newAddress);
-                    boolean isUpdated = customerService.updateCustomer(updateId, updatedCustomer);
+                    Product updatedProduct = new Product(updateId, newName, newBirthDate, newAddress);
+                    boolean isUpdated = productService.updateProduct(updateId, updatedProduct);
                     if (isUpdated) {
                         System.out.println("Cập nhật khách hàng thành công!");
                     } else {

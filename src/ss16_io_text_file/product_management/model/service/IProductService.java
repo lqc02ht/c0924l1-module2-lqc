@@ -1,12 +1,12 @@
-package ss9_list.customer_management.model.service;
+package ss16_io_text_file.product_management.model.service;
 
-import ss9_list.customer_management.model.object.Product;
+import ss16_io_text_file.product_management.model.object.Product;
 
 import java.util.List;
 
-public interface ICustomerService {
+public interface IProductService {
     List<Product> findAll(); // Trả về danh sách kiểu List thay vì mảng
-    void addCustomer(Product product);
+    void addProduct(Product product);
     boolean deleteProductById(int id);
     boolean updateProduct(int id, Product updatedProduct); // Thêm phương thức update
 }
