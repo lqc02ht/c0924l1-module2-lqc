@@ -50,8 +50,13 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return this.registryNumber + "," + this.automaker + "," + this.year + "," + this.owner + ",";
+        return "{registryNumber='" + registryNumber + '\'' +
+                ", automaker='" + automaker + '\'' +
+                ", year=" + year +
+                ", owner='" + owner + '\'';
     }
 
-    public abstract String getInfoToFile();
+    public String getInforToFile() {
+        return this.registryNumber + "," + this.automaker + "," + this.year + "," + this.owner;
+    }
 }

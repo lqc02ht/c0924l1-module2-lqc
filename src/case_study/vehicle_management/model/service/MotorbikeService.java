@@ -28,7 +28,7 @@ public class MotorbikeService implements VehicleService {
 
     public void addVehicle(Vehicle vehicle) {
         List<String> stringList = new ArrayList<>();
-        stringList.add(vehicle.getInfoToFile());
+        stringList.add(vehicle.getInforToFile());
         FileHandler.writeFile(MOTORBIKE_FILE, stringList, true);
     }
 
@@ -45,7 +45,7 @@ public class MotorbikeService implements VehicleService {
         if (isDeleted) {
             List<String> stringList = new ArrayList<>();
             for (Vehicle motorbike : motorbikeList) {
-                stringList.add(motorbike.getInfoToFile());
+                stringList.add(motorbike.getInforToFile());
             }
             FileHandler.writeFile(MOTORBIKE_FILE, stringList, false);
         }

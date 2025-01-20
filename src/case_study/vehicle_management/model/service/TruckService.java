@@ -28,7 +28,7 @@ public class TruckService implements VehicleService {
 
     public void addVehicle(Vehicle vehicle) {
         List<String> stringList = new ArrayList<>();
-        stringList.add(vehicle.getInfoToFile());
+        stringList.add(vehicle.getInforToFile());
         FileHandler.writeFile(TRUCK_FILE, stringList, true);
     }
 
@@ -45,7 +45,7 @@ public class TruckService implements VehicleService {
         if (isDeleted) {
             List<String> stringList = new ArrayList<>();
             for (Vehicle truck : truckList) {
-                stringList.add(truck.getInfoToFile());
+                stringList.add(truck.getInforToFile());
             }
             FileHandler.writeFile(TRUCK_FILE, stringList, false);
         }

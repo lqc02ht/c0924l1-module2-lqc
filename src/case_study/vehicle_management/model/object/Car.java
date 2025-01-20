@@ -30,7 +30,14 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public String getInfoToFile() {
-        return super.toString() + "," + this.seatAmount + "," + this.type;
+    public String toString() {
+        return super.toString() + ", seatAmount='" + seatAmount + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
+
+    @Override
+    public String getInforToFile() {
+        return super.getInforToFile() + "," + this.seatAmount + "," + this.type;
     }
 }

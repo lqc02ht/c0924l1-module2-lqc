@@ -20,7 +20,12 @@ public class Truck extends Vehicle {
     }
 
     @Override
-    public String getInfoToFile() {
-        return super.toString() + "," + this.load;
+    public String toString() {
+        return super.toString() + ", load='" + load + '\'' + '}';
+    }
+
+    @Override
+    public String getInforToFile() {
+        return super.getInforToFile() + "," + this.load;
     }
 }

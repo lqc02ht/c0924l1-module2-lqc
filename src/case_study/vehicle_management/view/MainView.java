@@ -32,6 +32,5 @@ public class MainView {
                     System.out.println("Lựa chọn không hợp lệ. Vui lòng thử lại!");
             }
         }
-
     }
 }

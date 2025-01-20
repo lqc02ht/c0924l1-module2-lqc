@@ -29,7 +29,7 @@ public class CarService implements VehicleService {
 
     public void addVehicle(Vehicle vehicle) {
         List<String> stringList = new ArrayList<>();
-        stringList.add(vehicle.getInfoToFile());
+        stringList.add(vehicle.getInforToFile());
         FileHandler.writeFile(CAR_FILE, stringList, true);
     }
 
@@ -62,7 +62,7 @@ public class CarService implements VehicleService {
         if (isDeleted) {
             List<String> stringList = new ArrayList<>();
             for (Vehicle car : carList) {
-                stringList.add(car.getInfoToFile());
+                stringList.add(car.getInforToFile());
             }
             FileHandler.writeFile(CAR_FILE, stringList, false);
         }

@@ -20,7 +20,13 @@ public class Motorbike extends Vehicle {
     }
 
     @Override
-    public String getInfoToFile() {
-        return super.toString() + "," + this.power;
+    public String toString() {
+        return super.toString() + ", power='" + power + '\'' +
+                '}';
+    }
+
+    @Override
+    public String getInforToFile() {
+        return super.getInforToFile() + "," + this.power;
     }
 }

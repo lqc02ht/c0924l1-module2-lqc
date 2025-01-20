@@ -69,7 +69,7 @@ public class VehicleController {
         if (service instanceof CarService) {
             System.out.println("Nhập số chỗ ngồi:");
             int seatAmount = Integer.parseInt(scanner.nextLine());
-            System.out.println("Nhập kiểu xe (du lịch, xe khách):");
+            System.out.println("Nhập kiểu xe:");
             String type = scanner.nextLine();
             return new Car(registryNumber, automaker, year, owner, seatAmount, type);
         } else if (service instanceof TruckService) {
